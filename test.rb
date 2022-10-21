@@ -1,6 +1,8 @@
 require "selenium-webdriver"
 
-service = Selenium::WebDriver::Service.chrome(path: '/Users/r_hasan/Downloads/chromedriver')
-driver = Selenium::WebDriver.for :chrome, service: service
+options = Selenium::WebDriver::Chrome::Options.new(args: ['start-maximized', 'user-data-dir=./foo/'])
+service = Selenium::WebDriver::Service.chrome(path: './chromedriver')
 
-driver.get("https://facebook.com")
+driver = Selenium::WebDriver.for :chrome, service: service, capabilities: options
+
+driver.get("https://n.trucklagbe.com/atest/login")
