@@ -1,0 +1,3 @@
+require "dotenv/load"
+
+API_BIDDING_CREATE = ENV['API_BIDDING_CREATE']
