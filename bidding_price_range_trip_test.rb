@@ -11,14 +11,15 @@ driver = Selenium::WebDriver.for :chrome, service: service, capabilities: option
 
 driver.get(API_REQUESTS)
 
-
 original_window = driver.window_handle
 
 el = driver.find_element(:id, "create_new_trip")
 el.click
 
+sleep 1
+
 el = driver.find_element(:name, "search_shipper")
-el.send_keys "01819616939"
+el.send_keys API_USER_PHONE
 
 el = driver.find_element(:id, "search_button")
 el.click
@@ -47,7 +48,5 @@ sleep 1
 el = driver.find_element(:class, "suggestion")
 
 p el
-
-sleep 300
 
 sleep 300
