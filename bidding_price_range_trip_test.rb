@@ -46,8 +46,89 @@ el.send_keys "maniknagar"
 
 sleep 1
 
-el = driver.find_element(:class, "suggestion")
+# el = driver.find_element(:class, "suggestion")
 
-p el
+el = driver.find_element(:css => ".suggestion > div:nth-child(1)")
+el.click
+
+sleep 1
+
+el = driver.find_element(:xpath, "//input[@placeholder='Search Unload Location']")
+el.send_keys "kasba"
+
+sleep 1
+
+el = driver.find_element(:css => ".suggestion-item:first-of-type .title")
+el.click
+
+sleep 1
+
+el = driver.find_element(:class, "blue-btn")
+el.click
+
+sleep 1
+
+el = driver.find_element(:class, "blue-btn")
+el.click
+
+sleep 1
+
+el = driver.find_element(:id, "truckCategoryDropdown")
+el.click
+
+sleep 1
+
+el = driver.find_element(:css, ".ton-body-top > button:nth-child(1)")
+el.click
+
+sleep 1
+
+el = driver.find_element(:css, ".feet-body-top > button:nth-child(1)")
+el.click
+
+sleep 1
+
+el = driver.find_element(:css, ".trailer-shape-type-body > button:nth-child(1)")
+el.click
+
+sleep 1
+
+el = driver.find_element(:id, "apply")
+el.click
+
+sleep 1
+
+el = driver.find_element(:xpath, '//button[text()="Bidding "]')
+el.click
+
+sleep 1
+
+el = driver.find_element(:id, "dateDropdown")
+el.click
+
+sleep 1
+
+el = driver.find_element(:xpath, '//*[@id="trip-info-panel"]/app-trip-information/div[1]/div/app-date-time-selection/div/div/div/div[1]/app-bidding-date/div/div/div/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[6]/div[2]/div')
+el.click 
+
+sleep 1
+
+el = driver.find_element(:css => 'select option[value="02:00:00"]')
+el.click 
+
+sleep 1
+
+el = driver.find_element(:id, 'product_details')
+el.send_keys "test automation"
+
+sleep 1
+
+el = driver.find_element(:css => '[formcontrolname="isCashTrip"]')
+el.click
+
+sleep 1
+
+el = driver.find_element(:xpath, '//button[text()="PUBLISH TRIP "]')
+el.click
 
 sleep 300
