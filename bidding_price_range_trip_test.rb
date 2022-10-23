@@ -116,7 +116,6 @@ el.click
 
 sleep 1
 
-# el = driver.find_element(:xpath, '//button[text()="Fixed Price "]')
 el = driver.find_element(:xpath, '//button[text()="Bidding "]')
 el.click
 
@@ -127,8 +126,12 @@ el.click
 
 sleep 1
 
-el = driver.find_element(:xpath, '//*[@id="trip-info-panel"]/app-trip-information/div[1]/div/app-date-time-selection/div/div/div/div[1]/app-bidding-date/div/div/div/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[6]/div[2]/div')
-el.click 
+el = driver.find_elements(:css, '.btn-light')
+el.each do |item|
+    if item.text == "25"
+        item.click
+    end
+end
 
 sleep 1
 
