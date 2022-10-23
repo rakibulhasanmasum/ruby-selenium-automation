@@ -1,6 +1,7 @@
 # require "./api/bidding"
 # require "./api/auth"
 require "./api/requests"
+require "./api/user"
 
 require "selenium-webdriver"
 
