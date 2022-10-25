@@ -9,8 +9,8 @@ require "selenium-webdriver"
 
 options = {
     # args: ['disable-infobars', 'disable-gpu', 'privileged', 'ignore-certificate-errors', 'no-default-browser-check'],
-    # args: ['user-data-dir=./user_data/', 'profile-directory=Profile 1'],
-    args: ['--user-data-dir=/home/rakibul/.config/google-chrome/', '--profile-directory=Profile 1'],
+    args: ['user-data-dir=/home/rakibul/Workstation/ruby-selenium-automation/user_data'],
+    # args: ['--user-data-dir=/home/rakibul/.config/google-chrome/', '--profile-directory=Profile 1'],
     w3c: true,
     mobileEmulation: {},
     prefs: {
